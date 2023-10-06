@@ -6,9 +6,16 @@
 <head>
 <meta charset="UTF-8">
 <title>넘버몬스터</title>
+<link rel="stylesheet" href="./NewFile.css">
+<style type="text/css">
+*{
+	text-align: center;
+}
+
+</style>
 </head>
 <body>
-	<%
+	<%--
 		Battle battle = new Battle();
 		Field field = new Field();
 		Hint hint = new Hint();
@@ -22,13 +29,16 @@
 		{
 			fieldSize =	Integer.parseInt(request.getParameter("fieldSize"));
 			request.setAttribute("fieldSize", fieldSize);
-			RequestDispatcher dispatch = request.getRequestDispatcher("./field.jsp");
-			dispatch.forward(request, response);
+			if(request.getParameter("monsterCount")!=null)
+			{
+				monsterCount = Integer.parseInt(request.getParameter("monsterCount"));
+				request.setAttribute("monsterCount", monsterCount);	
+			} 
 		}
 
 		field.SetField(fieldSize, player);
-	%>
-	
+	--%>
+	<h1>넘버몬스터 시작</h1>
 	<form action="./index.jsp" method="get">
 		<label>범위를 지정해주세요.
 		<input type="text" name="fieldSize">
@@ -39,17 +49,45 @@
 	<form action="./index.jsp" method="get">
 		<label>잡고싶은 마릿수를 설정해주세요. 
 		<input type="text"name="monsterCount">
-		<a href="./field.jsp"><input type="submit" value="입력"></a>
+		<input type="submit" value="입력">
 		</label>
 	</form>
-	<%
-	for(int i=0;i<fieldSize*fieldSize;i++)
-	{	
+	<div class="container"	style="width: <%=200*3 %>px;
+    height: fit-content;
+    margin: 0 auto;
+    display: grid;
+	grid-template-columns: repeat(<%=3 %> , 1fr);
+     grid-column-gap: 5px;
+     grid-row-gap: 5px;
+    padding:10px;
+    background-color: #f54;
+    ">
+		<%
+	//int length=fieldSize * fieldSize;
+		
+	for (int i = 0; i < 9; i++) {
 	%>
-		monster
+	
+		<button><div class="monster">monster<%=i+1 %></div></button>
+	
 	<%
 	}
 	%>
+	</div>
+	<% 
+	for(int i=0; i<2; i++)
+	{
+	%>
+	<form action="./index.jsp" method="get">
+		<label><%=(i+1)+"번째"%>지정할 몬스터를 설정해주세요.
+		<input type="text"name="monsterCount">
+		<input type="submit" value="입력">
+		</label>
+	</form>
+	<%
+	 }
+	%>
+
 
 </body>
 </html>
