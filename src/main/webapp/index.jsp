@@ -1,17 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	import="Game3.*"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Insert title here</title>
 <title>넘버몬스터</title>
 <link rel="stylesheet" href="./NewFile.css">
 <style type="text/css">
 *{
 	text-align: center;
 }
-
 </style>
 </head>
 <body>
@@ -35,7 +34,6 @@
 				request.setAttribute("monsterCount", monsterCount);	
 			} 
 		}
-
 		field.SetField(fieldSize, player);
 	--%>
 	<h1>넘버몬스터 시작</h1>
@@ -45,7 +43,7 @@
 		<input type="submit" value="입력">
 		</label>
 	</form>
-	
+
 	<form action="./index.jsp" method="get">
 		<label>잡고싶은 마릿수를 설정해주세요. 
 		<input type="text"name="monsterCount">
@@ -67,30 +65,30 @@
 		
 	for (int i = 0; i < 9; i++) {
 	%>
-	
+
 		<button><div class="monster">monster<%=i+1 %></div></button>
-	
+
 	<%
 	}
 	%>
 	</div>
 	<% 
-	for(int i=0; i<2; i++)
+	for(int i=0; i<3; i++)
 	{
 	%>
 	<form action="./index.jsp" method="get">
-		<label><%=(i+1)+"번째"%>지정할 몬스터를 설정해주세요.
-		<input type="text"name="monsterCount">
-		<input type="submit" value="입력">
+		<label><%=(i+1)+"번째"%>지정할 몬스터 입니다.
 		</label>
 	</form>
 	<%
 	 }
 	%>
+	<input type="button" value="필드로가기" onclick="location.href='field.jsp'">
 
 
 </body>
 </html>
+
 
 
 
