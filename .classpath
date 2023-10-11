@@ -1,26 +1,19 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+	<classpathentry kind="con"
+		path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
-			<attribute name="module" value="true"/>
+			<attribute name="module" value="true" />
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ojdbc11.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/tomcat-jdbc.jar"/>
-	<classpathentry kind="output" path="build/classes"/>
+	<classpathentry kind="src" path="src/main/java" />
+	<classpathentry kind="con"
+		path="org.eclipse.jst.j2ee.internal.web.container" />
+	<classpathentry kind="con"
+		path="org.eclipse.jst.j2ee.internal.module.container" />
+	<classpathentry kind="lib"
+		path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/servlet-api.jar" />
+	<classpathentry kind="lib"
+		path="C:/Users/KGA/Downloads/sqldeveloper-23.1.0.097.1607-x64/sqldeveloper/jdbc/lib/ojdbc11.jar" />
+	<classpathentry kind="output" path="build/classes" />
 </classpath>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path=""/>
-	<classpathentry kind="lib" path="C:/Users/pjw/Downloads/apache-tomcat-9.0.80-windows-x64/apache-tomcat-9.0.80/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/pjw/Downloads/sqldeveloper-23.1.0.097.1607-x64/sqldeveloper/jdbc/lib/ojdbc11.jar"/>
-	<classpathentry kind="lib" path="C:/Users/pjw/Downloads/apache-tomcat-9.0.80-windows-x64/apache-tomcat-9.0.80/lib/tomcat-jdbc.jar"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
->>>>>>> refs/remotes/origin/develop
