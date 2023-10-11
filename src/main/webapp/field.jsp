@@ -11,10 +11,19 @@
         width:300px;
         margin:auto;
     }
+<<<<<<< HEAD
     #txtContact{
         width:fit-content;
         margin:auto;
     }
+=======
+
+    #txtContact{
+        width:fit-content;
+        margin:auto;
+    }
+
+>>>>>>> refs/remotes/origin/develop
     #btnSubmit{
         width:100px;
         margin:auto;
@@ -37,9 +46,15 @@
 	<%	
 	for (int i = 0; i < 9; i++) {
 	%>
+<<<<<<< HEAD
 
 		<div class="monster">monster<%=i+1 %></div>
 
+=======
+	
+		<div class="monster">monster<%=i+1 %></div>
+	
+>>>>>>> refs/remotes/origin/develop
 	<%
 	}
 	%>
@@ -52,7 +67,12 @@
     <button type="submit" id="btnSubmit" > 아래 </button>
 </div>
 	<button type="submit" id="btnSubmit" onclick="location.href='battle.jsp'"> 배틀페이지 </button>
+<<<<<<< HEAD
 
 
+=======
+	
+	
+>>>>>>> refs/remotes/origin/develop
 </body>
 </html>
