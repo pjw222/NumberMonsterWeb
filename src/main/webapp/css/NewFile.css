@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.monster {
+    padding: 10%;
+    border: 10% solid #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ff0;
+}

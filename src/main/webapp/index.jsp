@@ -1,15 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <title>넘버몬스터</title>
-<link rel="stylesheet" href="./NewFile.css">
+<link rel="stylesheet" href="./css/grid.css">
+<link rel="stylesheet" href="./css/NewFile.css">
 <style type="text/css">
-*{
+* {
 	text-align: center;
+}
+
+.item {
+	margin: auto;
+}
+
+.item:nth-child(1) {
+	grid-column: 1/3;
+	grid-row: 1/2;
+	width: 430px;
+	padding: 100px;
+	background-image: url("./img/number.jpg");
+	background-repeat: repeat-x;
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.item:nth-child(2) {
+	border: solid;
+	grid-column: 1/3;
+	width: 430px;
+	margin: auto;
+	justify-content: center;
+}
+
+.input {
+	width: 75px;
 }
 </style>
 </head>
@@ -36,54 +64,26 @@
 		}
 		field.SetField(fieldSize, player);
 	--%>
-	<h1>넘버몬스터 시작</h1>
-	<form action="./index.jsp" method="get">
-		<label>범위를 지정해주세요.
-		<input type="text" name="fieldSize">
-		<input type="submit" value="입력">
-		</label>
-	</form>
-
-	<form action="./index.jsp" method="get">
-		<label>잡고싶은 마릿수를 설정해주세요. 
-		<input type="text"name="monsterCount">
-		<input type="submit" value="입력">
-		</label>
-	</form>
-	<div class="container"	style="width: <%=200*3 %>px;
-    height: fit-content;
-    margin: 0 auto;
-    display: grid;
-	grid-template-columns: repeat(<%=3 %> , 1fr);
-     grid-column-gap: 5px;
-     grid-row-gap: 5px;
-    padding:10px;
-    background-color: #f54;
-    ">
-		<%
-	//int length=fieldSize * fieldSize;
-		
-	for (int i = 0; i < 9; i++) {
-	%>
-
-		<button><div class="monster">monster<%=i+1 %></div></button>
-
-	<%
-	}
-	%>
+	<div class="container">
+		<div class="item">
+			<h1>넘버몬스터 시작</h1>
+		</div>
+		<div class="item">
+			<form action="./check.jsp" method="post">
+				<div>
+					<label> 범위를 지정해주세요. <input class="input" type="text"
+						placeholder="범위 입력!" name="fieldSize">
+					</label>
+				</div>
+				<div>
+					<label> 잡고싶은 마릿수를 설정해주세요. <input class="input" type="text"
+						placeholder="마릿수 입력!" name="monsterCount">
+					</label>
+				</div>
+				<input type="submit" value="체크하기">
+			</form>
+		</div>
 	</div>
-	<% 
-	for(int i=0; i<3; i++)
-	{
-	%>
-	<form action="./index.jsp" method="get">
-		<label><%=(i+1)+"번째"%>지정할 몬스터 입니다.
-		</label>
-	</form>
-	<%
-	 }
-	%>
-	<input type="button" value="필드로가기" onclick="location.href='field.jsp'">
 
 
 </body>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>넘버몬스터필드</title>
-<link rel="stylesheet" href="./NewFile.css">
+<link rel="stylesheet" href="./css/NewFile.css">
 <style>
     #wrapper{
         width:300px;
@@ -60,7 +60,7 @@
 </head>
 <body>	
 	<h1 style="text-align: center;">필드</h1>
-	<div class="container"	style="width: <%=200*3 %>px;
+	<div class="field"	style="width: <%=200*3 %>px;
     height: fit-content;
     margin: 0 auto;
     display: grid;
