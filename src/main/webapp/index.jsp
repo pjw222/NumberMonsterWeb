@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,6 +65,12 @@
 		}
 		field.SetField(fieldSize, player);
 	--%>
+	<c:if test="${param.errorMsg != null }">
+		<script>
+			alert("몬스터가 너무 많습니다");
+			location.href="/number";
+		</script>
+	</c:if>
 	<div class="container">
 		<div class="item">
 			<h1>넘버몬스터 시작</h1>
@@ -82,6 +89,7 @@
 				</div>
 				<input type="submit" value="체크하기">
 			</form>
+			
 		</div>
 	</div>
 

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.field{	
+    height: fit-content;
+    margin: 0 auto;
+    display: grid;
+     grid-column-gap: 5px;
+     grid-row-gap: 5px;
+    padding:10px;
+    background-color: #f54;
+}

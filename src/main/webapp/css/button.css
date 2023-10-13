@@ -1,0 +1,50 @@
+@charset "UTF-8";
+    #wrapper{
+        width:300px;
+        margin:auto;
+    }
+
+    #txtContact{
+        width:fit-content;
+        margin:auto;
+    }
+
+
+    #btnLeft{
+        width:100px;
+        position:relative;    /*절대값으로 위치를 설정*/
+        right: 105px;    /* x축 */
+        top: 24px;  
+        margin:auto;
+        
+    }
+    #btnRight{
+        width:100px;
+        position:relative;
+ 		
+ 		left: 95px;    /* x축 */
+        top: 0px; 
+        margin:auto;
+        
+        
+    }
+    #btnUp{
+        width:100px;
+        top: 0px;
+        left: 100px; 
+        margin:auto;
+        position:relative;
+    }
+    #btnDown{
+        width:100px;
+        top: 0px;
+        left: 100px;
+        margin:auto;
+        position:relative;
+        
+    }
+    #btnbattle{
+        width:100px;
+        margin:auto;
+        display:block;
+    }
