@@ -67,7 +67,7 @@
 	--%>
 	<c:if test="${param.errorMsg != null }">
 		<script>
-			alert("몬스터가 너무 많습니다");
+			alert("잘못된 입력입니다.");
 			location.href="/number";
 		</script>
 	</c:if>

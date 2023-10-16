@@ -10,19 +10,18 @@
 	margin: auto;
 	justify-content: center;
 	width: 1000px;
+	
 	}
 	
 .item-main{
 	grid-column: 1/3;
 	grid-row: 1/2;
-	width: 300px;
 	margin:auto;
 }
 
 .item-field{
 	grid-column: 1/3;
 	grid-row: 2/3;
-	width: 300px;
 	margin:auto;
 }
 

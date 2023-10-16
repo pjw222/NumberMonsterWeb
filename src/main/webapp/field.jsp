@@ -12,46 +12,40 @@
 <link rel="stylesheet" href="./css/field.css">
 </head>
 <style>
-.item-main{
+.item-main {
 	grid-column: 1/3;
 	grid-row: 1/2;
 	width: 300px;
-	margin:auto;
+	margin: auto;
 }
-.item-field{
+
+.item-field {
 	grid-column: 1/3;
 	grid-row: 2/3;
-	width: 300px;
-	margin:auto;
+	margin: auto;
 }
-.item-button{
+
+.item-button {
 	grid-column: 1/3;
 	grid-row: 4/5;
 	width: 300px;
-	margin:auto;
+	margin: auto;
 }
-.button-field{
-	display:block;
-	margin:auto;
+
+.button-field {
+	display: block;
+	margin: auto;
 }
 </style>
 <body>
 	<div class="container">
-	<div class="item-main">
-		<h1 style="text-align: center;">필드</h1>
+		<div class="item-main">
+			<h1 style="text-align: center;">필드</h1>
 		</div>
 		<div class="item-field">
-		<jsp:include page="getfield.jsp"></jsp:include>
+			<jsp:include page="getfield.jsp" flush="ture" />
 		</div>
-		<%-- <div class="field"
-		style="width: ${(param.fieldSize*200)}px;
-	grid-template-columns: repeat(${param.fieldSize } , 1fr);
-    ">
-		<c:forEach var="i" begin="1"
-			end="${(param.fieldSize*param.fieldSize)}" step="1" varStatus="loop">
-			<div class="monster">monster${i }</div>
-		</c:forEach>
-	</div>--%>
+
 		<div class="item-button">
 			<div id="wrapper" style="background-color: green;">
 				<h3 id="txtContact">방향키</h3>

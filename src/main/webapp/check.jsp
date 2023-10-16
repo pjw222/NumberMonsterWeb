@@ -12,77 +12,74 @@
 <link rel="stylesheet" href="./css/grid.css">
 </head>
 <style>
-.move {
-	display: block;
-	margin: auto;
-}
-.item-main{
+.item-main {
 	grid-column: 1/3;
 	grid-row: 1/2;
 	width: 300px;
-	margin:auto;
+	margin: auto;
 }
-.item-field{
+
+.item-field {
 	grid-column: 1/3;
 	grid-row: 2/3;
-	width: 300px;
-	margin:auto;
+	display: flex;
+	justify-content: center;
+	margin: auto;
 }
-.item-button{
+
+.item-button {
 	grid-column: 1/3;
 	grid-row: 4/5;
 	width: 300px;
-	margin:auto;
+	margin: auto;
 }
-.button-field{
-	display:block;
-	margin:auto;
+
+.button-field {
+	display: flex;
+	justify-content: center;
+}
+.item-targetMonster{
+	display:grid;
+	padding: 10px;
+    border: 10px solid 
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    background-color: blue;
+    grid-column: 1/3;
+ 
 }
 </style>
 <body>
+
 	<c:if
-		test="${(param.fieldSize*param.fieldSize) <= param.monsterCount }">
+		test="${(param.fieldSize*param.fieldSize) <= param.monsterCount || 0 >= param.monsterCount }">
 		<c:redirect url="/">
 			<c:param name="errorMsg" value="error" />
 		</c:redirect>
 	</c:if>
 	<div class="container">
-	<div class="item-main">
-	<h1>몬스터 지정 페이지</h1>
-	</div>
+		<div class="item-main">
+			<h1>몬스터 지정 페이지</h1>
+		</div>
 		<div class="item-field">
-			<jsp:include page="getfield.jsp"></jsp:include>
+			<jsp:include page="getfield.jsp" />
+		</div>
+		<div class="item-targetMonster" style="grid-template-columns: repeat(${param.monsterCount} , 1fr);">
+			<c:forEach var="i" begin="1"
+				end="${param.monsterCount}" step="1" varStatus="loop">
+					<div class="monster">${i }번째 지정한 몬스터 : ${i } </div>		
+			</c:forEach>
 		</div>
 		<div class="item-button">
-			<input class="button-field"type="button" value="필드로가기"
-				onclick="location.href='field.jsp'">
+			<form class="button-field" action="field.jsp" method="post">
+				<input type="hidden" value="${param.fieldSize }" name="fieldSize" />
+				<input type="hidden" value="${param.monsterCount }"
+					name="monsterCount" /> <input type="submit" value="필드로가기">
+			</form>
 		</div>
 	</div>
-	<%-- <jsp:forward page="./field.jsp" />--%>
-	<%-- 
-	<c:choose>
-		<c:when
-			test="${(param.fieldSize*param.fieldSize) <= param.monsterCount }">
-			<%
-			response.sendRedirect("index.jsp");
-			%>
-		</c:when>
-		<c:when
-			test="${(param.fieldSize*param.fieldSize) == param.monsterCount }">
-			<%
-			response.sendRedirect("index.jsp");
-			%>
-		</c:when>
-	</c:choose>
-	<div class="field"
-		style="width: ${(param.fieldSize*200)}px;
-	grid-template-columns: repeat(${param.fieldSize } , 1fr);
-    ">
-		<c:forEach var="i" begin="1"
-			end="${(param.fieldSize*param.fieldSize)}" step="1" varStatus="loop">
-			<div class="monster">monster${i }</div>
-		</c:forEach>
-		
-	</div>--%>
+
 </body>
 </html>
