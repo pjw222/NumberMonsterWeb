@@ -52,7 +52,11 @@
 }
 </style>
 <body>
-
+	<%
+		Cookie fieldSize = new Cookie("field",request.getParameter("fieldSize"));
+		response.addCookie(fieldSize);
+			
+	%>
 	<c:if
 		test="${(param.fieldSize*param.fieldSize) <= param.monsterCount || 0 >= param.monsterCount }">
 		<c:redirect url="/">
@@ -69,7 +73,7 @@
 		<div class="item-targetMonster" style="grid-template-columns: repeat(${param.monsterCount} , 1fr);">
 			<c:forEach var="i" begin="1"
 				end="${param.monsterCount}" step="1" varStatus="loop">
-					<div class="monster">${i }번째 지정한 몬스터 : ${i } </div>		
+			<div class="monster">${i }번째 지정한 몬스터 : ${param.tm } </div>		
 			</c:forEach>
 		</div>
 		<div class="item-button">

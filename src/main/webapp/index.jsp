@@ -65,6 +65,7 @@
 		}
 		field.SetField(fieldSize, player);
 	--%>
+
 	<c:if test="${param.errorMsg != null }">
 		<script>
 			alert("잘못된 입력입니다.");
