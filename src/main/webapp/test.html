@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+        window.onload = () => {
+            const el = document.getElementById('box');
+
+            el.addEventListener('click', event => {
+                event.currentTarget.style.backgroundColor = 'red';
+            }, false)
+        }
+        /*
+        window.onload = () => {
+            const el = document.getElementById('box');
+
+            const changeColor = (e) => {
+                e.currentTarget.style.background = "red";
+            }
+            el.addEventListener('click', changeColor);
+        }
+        */
+    </script>
+  </head>
+  <body>
+      <div id="box">
+          click me
+      </div>
+  </body>
+</html>
