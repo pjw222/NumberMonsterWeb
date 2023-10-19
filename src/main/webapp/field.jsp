@@ -18,6 +18,9 @@
 	width: 300px;
 	margin: auto;
 }
+.container{
+	grid-template-rows: repeat(24, minmax(auto,auto));
+}
 
 .item-field {
 	grid-column: 1/3;

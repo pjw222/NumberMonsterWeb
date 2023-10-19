@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .field{	
-    height: fit-content;
+	width: 800px;
+    height: 400px;
     margin: 0 auto;
     display: grid;
      grid-column-gap: 5px;

@@ -2,15 +2,7 @@
 .monster {
     padding: 10%;
     border: 10% solid #000;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #ff0;
-}
-.monster2 {
-    padding: 10%;
-    border: 10% solid #000;
-    font-size: 20px;
+    font-size: 8px;
     font-weight: bold;
     text-align: center;
     background-color: #ff0;

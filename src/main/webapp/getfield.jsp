@@ -5,18 +5,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<%--
-			int count = Integer.parseInt(request.getParameter("monsterCount"));
-			int[] monster = new int[]{};
-			Set<Integer> tms = new TreeSet<Integer>();
-			tms.add(3);
-			
-		--%>
+<link rel="stylesheet" href="./css/root.css">
+<link rel="stylesheet" href="./css/field.css">
 
 <div class="field"
-	style="min-width=800px;
-		width: ${(param.fieldSize*200)}px;
+	style="
 	grid-template-columns: repeat(${param.fieldSize } , 1fr);
     ">
 
@@ -24,14 +17,14 @@
 		step="1" varStatus="loop">
 
 		<form action="check.jsp" method="get">
-
-			<div class="monster" id="monster">
-				<input type="checkBox" name="monster">monster${i }
-			</div>
-
 			<input type="hidden" value="${param.fieldSize }" name="fieldSize" />
 			<input type="hidden" value="${param.monsterCount }"
 				name="monsterCount" />
+			<div class="monster" id="monster">
+				${i }
+			</div>
+
+
 
 		</form>
 	</c:forEach>
