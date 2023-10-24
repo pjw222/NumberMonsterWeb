@@ -7,33 +7,6 @@
 <title>넘버몬스터배틀페이지</title>
 <link rel="stylesheet" href="./css/root.css">
 <link rel="stylesheet" href="./css/battle.css">
-<style>
-/* * { */
-/* 	text-align: center; */
-/* } */
-
-/* .container { */
-/* 	display: grid; */
-/* 	grid-template-columns: repeat(2, minmax(auto, auto)); */
-/* 	grid-template-rows: repeat(7); */
-/* 	grid-gap: 10px; */
-/* 	padding: 10px; */
-/* 	margin: auto; */
-/* 	justify-content: center; */
-/* } */
-
-/* #monsterDice { */
-/* 	border: 2px solid red; */
-/* 	padding: 10px; */
-/* 	margin: auto; */
-/* } */
-
-/* #btnSubmit { */
-/* 	width: 100px; */
-/* 	margin: auto; */
-/* 	display: block; */
-/* } */
-</style>
 </head>
 <body>
 	<div class="container">

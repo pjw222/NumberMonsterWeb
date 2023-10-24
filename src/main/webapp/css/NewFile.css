@@ -1,13 +1,16 @@
 @charset "UTF-8";
+
 .monster {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid #000;
-    background-color: #ff0;
-    
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 5px solid #000;
+	background-color: #ff0;
+
 }
-span{
+
+span {
 	font-size: 15px;
 	font-weight: bold;
 }

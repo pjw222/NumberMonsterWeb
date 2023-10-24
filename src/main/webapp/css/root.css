@@ -19,3 +19,14 @@ input[type="submit"] {
 	height: 50px;
 	font-size: 21px;
 }
+.monster{
+	position: relative;
+	
+}
+.player {
+	box-sizing: border-box;
+	position: absolute;
+	border: 5px solid #000;
+	left: 70px;
+	top: 0px;
+}

@@ -8,29 +8,27 @@
 <link rel="stylesheet" href="./css/root.css">
 <link rel="stylesheet" href="./css/field.css">
 <link rel="stylesheet" href="./css/NewFile.css">
-
 <div class="field"
-	style="grid-template-columns: repeat(${param.fieldSize}, 1fr);">
+	style="grid-template-columns: repeat(${fieldSize}, 1fr);">
 
-	<c:forEach var="i" begin="1" end="${param.fieldSize * param.fieldSize}"
-		step="1" varStatus="loop">
+	<c:forEach var="i" begin="1" end="${fieldSize * fieldSize}" step="1"
+		varStatus="loop">
 		<div class="monster" id="monster">
 			<form action="check.jsp" method="get">
-				<input type="hidden" value="${param.fieldSize}" name="fieldSize" />
-				<input type="hidden" value="${param.monsterCount}"
-					name="monsterCount" /> <span>${i}</span>
+				<span data-status="normal">${i}</span>
 			</form>
+			<c:if test="${ i == fieldSize*fieldSize}">
+				<div class="player" id="player-16">player</div>
+			</c:if>
 		</div>
 	</c:forEach>
-
 </div>
+<%
+int fieldSize = Integer.parseInt(request.getParameter("fieldSize"));
+int[] field;
+field = new int[(fieldSize * fieldSize)];
+for (int i = 1; i <= field.length; i++) {
 
-<script>
-	const change = document.querySelectorAll(".monster");
+}
+%>
 
-	change.forEach(function(button) {
-		button.addEventListener("click", function() {
-			button.style.backgroundColor = "red";
-		});
-	});
-</script>

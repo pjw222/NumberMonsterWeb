@@ -14,8 +14,10 @@
 </style>
 <body>
 	<%
-	Cookie fieldSize = new Cookie("field", request.getParameter("fieldSize"));
-	response.addCookie(fieldSize);
+	session = request.getSession();
+	session.setAttribute("fieldSize", request.getParameter("fieldSize"));
+	session.setAttribute("monsterCount", request.getParameter("monsterCount"));
+	out.print("monsterCount : " + session.getAttribute("monsterCount"));
 	%>
 	<c:if
 		test="${(param.fieldSize*param.fieldSize) <= param.monsterCount || 0 >= param.monsterCount }">
@@ -28,13 +30,11 @@
 			<h1>몬스터 지정 페이지</h1>
 		</div>
 		<div class="item-field">
-
 			<jsp:include page="getfield.jsp" />
+			<script src="./js/select.jsp"></script>
 			<div class="item-button">
 				<form class="button-field" action="field.jsp" method="post">
-					<input type="hidden" value="${param.fieldSize }" name="fieldSize" />
-					<input type="hidden" value="${param.monsterCount }"
-						name="monsterCount" /> <input type="submit" value="필드로가기">
+					<input type="submit" value="필드로가기">
 				</form>
 			</div>
 		</div>

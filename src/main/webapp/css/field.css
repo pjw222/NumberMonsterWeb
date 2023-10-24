@@ -1,11 +1,13 @@
 @charset "UTF-8";
-.field{	
+
+.field {
 	width: 800px;
-    height: 400px;
-    margin: 0 auto;
-    display: grid;
-     grid-column-gap: 5px;
-     grid-row-gap: 5px;
-    padding:10px;
-    background-color: #f54;
+	height: 400px;
+	margin: 0 auto;
+	display: grid;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	padding: 10px;
+	background-color: #f54;
 }
+

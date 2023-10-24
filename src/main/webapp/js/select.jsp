@@ -1,6 +1,9 @@
+<%@ page language="java" contentType="application/javascript; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
   const monsters = document.querySelectorAll(".monster");
 
-  const maxMonsterCount = sessionStorage.getItem("monsterCount");
+  const maxMonsterCount = ${sessionScope.monsterCount};
   let clickedMonsterCount = 0;
 
   function handleMonsterClick(event) {
@@ -24,7 +27,7 @@
       clickedMonsterCount--;
     }
   }
-  sessionStorage.setItem("monsterCount", maxMonsterCount);
+  sessionStorage.setItem("monsterCount", ${sessionScope.monsterCount});
   monsters.forEach(function (monster) {
     monster.addEventListener("click", handleMonsterClick);
   });
