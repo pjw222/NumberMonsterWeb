@@ -19,7 +19,8 @@
 			<jsp:include page="getfield.jsp" flush="ture" />
 		</div>
 
-		<input type="submit" value="배틀페이지" onclick="location.href='battle.jsp'">
+		<input type="submit" value="배틀페이지"
+			onclick="location.href='battle.jsp'">
 	</div>
 
 

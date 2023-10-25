@@ -23,7 +23,7 @@
 			<h1 class="title">넘버몬스터 시작</h1>
 		</div>
 		<div class="item">
-		<form action="./check.jsp" method="post">
+		<form action="./field" method="post">
 				<div>
 					<label> 범위를 지정해주세요.</label> <input class="input" type="number"
 						min="2" max="10" placeholder="범위 입력!" name="fieldSize">					

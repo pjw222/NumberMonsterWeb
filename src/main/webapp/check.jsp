@@ -13,14 +13,15 @@
 <style>
 </style>
 <body>
-	<%
+<%-- 	<%
 	session = request.getSession();
-	session.setAttribute("fieldSize", request.getParameter("fieldSize"));
 	session.setAttribute("monsterCount", request.getParameter("monsterCount"));
 	out.print("monsterCount : " + session.getAttribute("monsterCount"));
-	%>
+
+	
+	%> --%>
 	<c:if
-		test="${(param.fieldSize*param.fieldSize) <= param.monsterCount || 0 >= param.monsterCount }">
+		test="${(fieldSize*fieldSize) <= param.monsterCount || 0 >= param.monsterCount }">
 		<c:redirect url="/">
 			<c:param name="errorMsg" value="error" />
 		</c:redirect>
@@ -33,7 +34,7 @@
 			<jsp:include page="getfield.jsp" />
 			<script src="./js/select.jsp"></script>
 			<div class="item-button">
-				<form class="button-field" action="field.jsp" method="post">
+				<form class="button-field" action="shuffle" method="post">
 					<input type="submit" value="필드로가기">
 				</form>
 			</div>
