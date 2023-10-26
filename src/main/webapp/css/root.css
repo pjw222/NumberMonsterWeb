@@ -30,3 +30,6 @@ input[type="submit"] {
 	left: 70px;
 	top: 0px;
 }
+span{
+	user-select: none;
+}
